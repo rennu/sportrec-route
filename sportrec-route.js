@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Sportrec GPX loader
 // @namespace    https://sloth.fi/
-// @version      1.0.1
+// @version      1.0.2
 // @description  Load your GPX file in sportrec
 // @author       Sakari E
 // @match        https://sportrec.eu/gps/*
