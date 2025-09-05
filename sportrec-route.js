@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Add route to sportrec
+// @name         Sportrec GPX loader
 // @namespace    https://sloth.fi/
 // @version      1.0.1
 // @description  Load your GPX file in sportrec
