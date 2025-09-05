@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Add route to sportrec
 // @namespace    https://sloth.fi/
-// @version      1.0.0
+// @version      1.0.1
 // @description  Load your GPX file in sportrec
-// @author       You
-// @match        https://sportrec.eu/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
+// @author       Sakari E
+// @match        https://sportrec.eu/gps/*
+// @icon         https://sportrec.eu/gps/logo/SR%20icon.svg
 // @grant        none
 // ==/UserScript==
 
