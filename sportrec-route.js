@@ -6,6 +6,7 @@
 // @author       Sakari E
 // @match        https://sportrec.eu/gps/*
 // @icon         https://sportrec.eu/gps/logo/SR%20icon.svg
+// @updateUrl    https://raw.githubusercontent.com/rennu/sportrec-route/refs/heads/main/sportrec-route.js
 // @grant        none
 // ==/UserScript==
 
