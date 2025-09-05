@@ -9,41 +9,15 @@
 // @grant        none
 // ==/UserScript==
 
-let mapLoaderDiv = null
-
 const styles = {
-  fileLoaderDiv: {
-    height: '100px',
-    width: '200px',
-    position: 'fixed',
-    top: '50%',
-    left: '50%',
-    marginLeft: '-50px',
-    marginTop: '-100px',
-    backgroundColor: '#fff',
-    zIndex: 1000,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  },
-
-  uploadButton: {
-    padding: '10px 20px',
-    backgroundColor: '#007bff',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-  },
-
   fileInput: {
     display: 'none',
     type: 'file',
     accept: '.gpx',
   }
 }
+
+let routeLine = null
 
 const loadGpxFile = async (event) => {
   const file = event.target.files[0]
@@ -55,7 +29,10 @@ const loadGpxFile = async (event) => {
   for (const pt of gpxDoc.getElementsByTagName('trkpt')) {
     _routePoints.push({ lat: parseFloat(pt.attributes.lat.value), lng: parseFloat(pt.attributes.lon.value) })
   }
-  window.L.polyline(_routePoints, { color: '#007bff', weight: 5 }).addTo(window.$map)
+  if (routeLine !== null) {
+    routeLine.remove()
+  }
+  routeLine = window.L.polyline(_routePoints, { color: '#007bff', weight: 5 }).addTo(window.$map)
 }
 
 const createMapLoader = () => {
@@ -65,7 +42,6 @@ const createMapLoader = () => {
 
   const mainDiv = document.createElement('div')
   mainDiv.className = 'option'
-
 
   const leftDiv = document.createElement('div')
   leftDiv.innerText = 'Load GPX file'
