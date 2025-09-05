@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Add route to sportrec
 // @namespace    https://sloth.fi/
-// @version      2025-09-05
+// @version      1.0.0
 // @description  Load your GPX file in sportrec
 // @author       You
 // @match        https://sportrec.eu/*
